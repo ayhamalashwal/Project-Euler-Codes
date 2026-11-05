@@ -1,11 +1,16 @@
 def abundant(n):
     sum = 0
-    checked = set()
-    checked.add(n)
-    for i in range(1, int(n**0.5) + 1):
-        if n % i == 0 and n not in checked:
-            sum += i
-            checked.add(i)
+    if n < 12:
+        return False
+    div_sum = 1
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            div_sum += i
+            d2 = n // i
+            if d2 != i:
+                div_sum += i
+    return div_sum > n
+
     if sum > n:
         return True
     else:
@@ -16,11 +21,14 @@ for i in range(28124):
     sum_all += i
 print(sum_all)
 checked = set()
-for i in range(1, 28124, -1):
-    for j in range(1, i, -1):
-        if abundant(j) and abundant(i - j) and (i - j) not in checked:
-            sum += i
-            checked.add(i - j)
+for i in range(28124, 0, -1):
+    can_be_written = False
+    for j in range(i, 1, -1):
+        if abundant(j) and abundant(i - j):
+            can_be_written = True
+            break
+    if can_be_written:
+        sum_abundant += i
 print(sum_abundant)
 
         
