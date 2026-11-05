@@ -18,10 +18,9 @@ print(sum_all)
 checked = set()
 for i in range(1, 28124, -1):
     for j in range(1, i, -1):
-        if abundant(j) and abundant(i - j) and i - j not in checked:
+        if abundant(j) and abundant(i - j) and (i - j) not in checked:
             sum += i
             checked.add(i - j)
-            checked.add(j)
 print(sum_abundant)
 
         
