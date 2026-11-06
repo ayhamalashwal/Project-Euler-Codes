@@ -3,6 +3,8 @@ def cycle(n):
     seen {}
     position = 0
 
-while remainder != 0:
-    if remainder in seen:
-        return position - seen[remainder]
+    while remainder != 0:
+        if remainder in seen:
+            return position - seen[remainder]
+        seen[remainder] = position
+        remainder = (remainder * 10) % n
