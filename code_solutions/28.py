@@ -1,5 +1,5 @@
 total_sum = 1
-for s in range(2, 1002, 2):
+for s in range(3, 1002, 2):
     step = s - 1
     top_right = s**2
     top_left = s**2 - step
