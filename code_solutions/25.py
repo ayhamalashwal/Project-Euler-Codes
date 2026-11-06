@@ -12,5 +12,5 @@ while True:
     if digits(Fn) == 1000:
         break
 
-print(Fn)
+print(index)
 
