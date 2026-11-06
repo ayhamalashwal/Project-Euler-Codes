@@ -4,7 +4,7 @@ result = []
 index = 1
 def digits(n):
     return len(str(n))
-While True:
+while True:
     Fn = Fn1 + Fn2
     Fn1 = Fn
     Fn2 = Fn1
