@@ -7,5 +7,5 @@ for i in range(9, -1, -1):
     fact = math.factorial(i)
     index = n // fact
     n %= fact
-    result.append(digits.pop(index))
+    result.append(str(digits.pop(index)))
 print("".join(result))
