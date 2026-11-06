@@ -8,3 +8,5 @@ def cycle(n):
             return position - seen[remainder]
         seen[remainder] = position
         remainder = (remainder * 10) % n
+        position += 1
+    return 0
