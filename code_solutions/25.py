@@ -1,1 +1,16 @@
-test
+Fn1 = 1
+Fn2 = 1
+result = []
+index = 1
+def digits(n):
+    return len(str(n))
+While True:
+    Fn = Fn1 + Fn2
+    Fn1 = Fn
+    Fn2 = Fn1
+    index += 3
+    if digits(Fn) == 1000:
+        break
+
+print(Fn)
+
