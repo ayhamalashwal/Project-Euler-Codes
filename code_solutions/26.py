@@ -12,3 +12,10 @@ def cycle(n):
     return 0
 max = 0
 best_n = 0
+
+for n in range(2, 1000):
+    length = cycle(n)
+    if length > max:
+        max = length
+        best_n = n
+print(best_n)
