@@ -19,6 +19,7 @@ for b in range(1001):
                 max_a = a
                 max_b = b
                 print("new record")
+print("done")
 print(max_a * max_b)
 
         
