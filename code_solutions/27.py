@@ -4,7 +4,7 @@ def prime(b):
     for i in range(2, int(b**0.5) + 1):
         if b % i == 0:
             return False
-        return True
+    return True
 max_a = 0
 max_b = 0
 longest = 0
