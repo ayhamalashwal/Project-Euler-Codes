@@ -8,4 +8,4 @@ for i in range(9, -1, -1):
     index = n // fact
     n %= fact
     result.append(digits.pop(index))
-print(result)
+print("".join(result))
