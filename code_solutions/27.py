@@ -10,7 +10,7 @@ max_b = 0
 longest = 0
 for b in range(1001):
     if prime(b):
-        for a in range(-999, 1000, 2):
+        for a in range(-999, 1000):
             n = 0
             while prime(n**2 + a*n + b):
                 n += 1
