@@ -1,7 +1,7 @@
 def prime(b):
     if b <= 1:
         return False
-    for i in range(2, b):
+    for i in range(2, int(b**0.5) + 1):
         if b % i == 0:
             return False
         return True
@@ -14,10 +14,10 @@ for b in range(1001):
             n = 0
             while prime(n**2 + a*n + b):
                 n += 1
-                if n > longest:
-                    longest = n
-                    max_a = a
-                    max_b = b
+            if n > longest:
+                longest = n
+                max_a = a
+                max_b = b
 print(max_a * max_b)
 
         
