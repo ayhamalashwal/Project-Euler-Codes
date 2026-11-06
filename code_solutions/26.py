@@ -10,3 +10,5 @@ def cycle(n):
         remainder = (remainder * 10) % n
         position += 1
     return 0
+max = 0
+best_n = 0
