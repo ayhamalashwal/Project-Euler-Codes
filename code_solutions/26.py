@@ -1,6 +1,6 @@
 def cycle(n):
     remainder = 1
-    seen {}
+    seen = {}
     position = 0
 
     while remainder != 0:
