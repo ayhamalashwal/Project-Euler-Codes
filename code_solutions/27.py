@@ -18,6 +18,7 @@ for b in range(1001):
                 longest = n
                 max_a = a
                 max_b = b
+                print("new record")
 print(max_a * max_b)
 
         
