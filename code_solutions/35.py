@@ -10,4 +10,6 @@ for n in range(2, LIMIT):
     if not prime[n]
         continue
     s = str(n)
+    if len(s) > 1 and any(digit in '024568' for digit in s):
+        continue
 
