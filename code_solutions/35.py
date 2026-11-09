@@ -1,7 +1,7 @@
 LIMIT = 1000000
 prime = [TRUE] * LIMIT 
 prime[0] = prime[1] = FAlSE
-for i in range(2, int(LIMIT**0.5) + 1)
+for i in range(2, int(LIMIT**0.5) + 1):
     if prime[i]:
         for j in range(i * i, LIMIT, i):
             prime[j] = FALSE
@@ -14,4 +14,5 @@ for n in range(2, LIMIT):
         continue
     if all(prime[s[i:] + s[:i]] for i in range(len(s)))
     counter += 1
+print(counter)
 
