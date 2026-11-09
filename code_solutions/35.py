@@ -12,7 +12,7 @@ for n in range(2, LIMIT):
     s = str(n)
     if len(s) > 1 and any(digit in '024568' for digit in s):
         continue
-    if all(prime[s[i:] + s[:i]] for i in range(len(s)))
-    counter += 1
+    if all(prime[s[i:] + s[:i]] for i in range(len(s))):
+        counter += 1
 print(counter)
 
