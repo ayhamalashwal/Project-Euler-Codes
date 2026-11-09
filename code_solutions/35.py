@@ -9,4 +9,5 @@ count = 0
 for n in range(2, LIMIT):
     if not prime[n]
         continue
+    s = str(n)
 
