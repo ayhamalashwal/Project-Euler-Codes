@@ -15,6 +15,6 @@ for n in range(10, 100):
             if len(rem_n_str) == 1 and len(rem_d_str):
                 rn = int(rem_n_str)
                 rd = int(rem_d_str)
-                    if rd != 0 and n * rd == d * rn:
-                        total_product *= Fraction(n, d)
+                if rd != 0 and n * rd == d * rn:
+                    total_product *= Fraction(n, d)
 print(total_product.denominator)
