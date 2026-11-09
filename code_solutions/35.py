@@ -7,7 +7,7 @@ for i in range(2, int(LIMIT**0.5) + 1):
             prime[j] = FALSE
 count = 0
 for n in range(2, LIMIT):
-    if not prime[n]
+    if not prime[n]:
         continue
     s = str(n)
     if len(s) > 1 and any(digit in '024568' for digit in s):
