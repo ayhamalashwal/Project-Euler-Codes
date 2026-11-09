@@ -11,3 +11,10 @@ for n in range(10, 100):
             if common == '0':
                 continue
             rem_n_str = str_n.replace(common, "", 1)
+            rem_d_str = str_d.replace(common, "", 1)
+            if len(rem_n_str) == 1 and len(rem_d_str):
+                rn = int(rem_n_str)
+                rd = int(rem_d_str)
+                    if rd != 0 and n * rd == d * rn:
+                        total_product *= Fraction(n, d)
+print(total_product.denominator)
