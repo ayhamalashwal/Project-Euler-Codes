@@ -9,6 +9,6 @@ for a in range(10,100):
     for b in range(100,1000):
         p = a * b
         s = f"{a}{b}{p}"
-        if len(s) and set(s) == set("123456789"):
+        if len(s) == 9 and set(s) == set("123456789"):
             products.add(p)
 print(sum(products))
