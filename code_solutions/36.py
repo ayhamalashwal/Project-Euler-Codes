@@ -19,4 +19,5 @@ def palindrome():
             if b == b[::-1]:
                 total_sum += 1
     print(total_sum)
+palindrome()
 
