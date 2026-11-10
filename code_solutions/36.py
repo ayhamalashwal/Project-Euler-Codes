@@ -5,7 +5,7 @@ def palindrome():
             b = bin(i)[2:]
             if b == b[::-1]:
                 total_sum += i
-    for root in range(1, 1000):
+    for root in range(10, 1000):
         s = str(root)
         rev = s[::-1]
         p_even = int(s + rev)
