@@ -2,7 +2,7 @@ def palindrome():
     palindrome = set()
     for i in range(1, 10):
         palindrome.add(i)
-    for root in range(10, 1000, 2):
+    for root in range(10, 1000):
         s = str(root)
         rev = s[::-1]
         p_even = int(s + rev)
@@ -14,7 +14,8 @@ def palindrome():
     total_sum = 0
     for i in palindrome:
         b = bin(i)[2:]
-        if b == b[::-1]:
-            total_sum += i
+        if i % 2 != 0:
+            if b == b[::-1]:
+                total_sum += i
     print(total_sum)
 palindrome()
