@@ -1,8 +1,6 @@
 def palindrome():
     palindrome = set()
-    for i in range(1, 10):
-        palindrome.add(i)
-    for root in range(10, 1000):
+    for root in range(1, 1000):
         s = str(root)
         rev = s[::-1]
         p_even = int(s + rev)
