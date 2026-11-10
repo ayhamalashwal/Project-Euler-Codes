@@ -12,12 +12,12 @@ def palindrome():
         if p_even < 1000000 and p_even % 2 != 0:
             b = bin(p_even)[2:]
             if b == b[::-1]:
-                total_sum += i
+                total_sum += root
         p_odd = int(s + rev[1:])
         if p_odd < 1000000 and p_odd % 2 != 0:
             b = bin(p_odd)[2:]
             if b == b[::-1]:
-                total_sum += i
+                total_sum += root
     print(total_sum)
 palindrome()
 
