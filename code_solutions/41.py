@@ -8,7 +8,7 @@ def is_prime(n):
         return False
     i = 5
     while i * i <= n:
-        if n % d == 0 or n % (d + 2) == 0:
+        if n % i == 0 or n % (i + 2) == 0:
             return False
         d += 6
     return True
