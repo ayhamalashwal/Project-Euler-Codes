@@ -8,5 +8,10 @@ def is_prime(n):
 def left_truncatable(n):
     s = str(n)
     for i in range(1, len(s)):
-        if not is_prime(int(s[i:]))
-
+        if not is_prime(int(s[i:])):
+            return False
+    return True
+queue = [2, 3, 5, 7]
+truncatable_primes = []
+while queue:
+    curr = queue.pop(0)
