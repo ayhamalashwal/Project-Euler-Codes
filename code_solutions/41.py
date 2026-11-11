@@ -15,4 +15,5 @@ def is_prime(n):
 digits = "7654321"
 for p in permutations(digits):
     val = int("".join(p))
-    if is_pr
+    if is_prime(val):
+        print(val)
