@@ -11,4 +11,4 @@ for i in range(1, 10000):
         val = int(concatenated)
         if val > max:
             max = val
-
+print(max)
