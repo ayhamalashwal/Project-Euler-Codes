@@ -19,4 +19,6 @@ while queue:
         truncatable_primes.append(curr)
     for digit in [1, 3, 7, 9]:
         next_val = curr * 10 + digit
-        if is_prime
+        if is_prime(next_val):
+            queue.append(next_val)
+print(sum(truncatable_primes))
