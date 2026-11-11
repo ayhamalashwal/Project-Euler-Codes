@@ -10,5 +10,6 @@ for p in range(1, 1001):
                 solutions += 1
     if solutions > max_solutions:
         max_solutions = solutions
+print(max_solutions)
 
 
