@@ -10,7 +10,7 @@ for p in range(1, 1001):
                 solutions += 1
     if solutions > max_solutions:
         max_solutions = solutions
-        best_solution = p
+        best_p = p
 print(best_p)
 
 
