@@ -17,3 +17,4 @@ for p in permutations(digits):
     val = int("".join(p))
     if is_prime(val):
         print(val)
+        break
