@@ -6,3 +6,7 @@ def is_prime(n):
             return False
     return True
 def left_truncatable(n):
+    s = str(n)
+    for i in range(1, len(s)):
+        if not is_prime(int(s[i:]))
+
