@@ -15,3 +15,8 @@ queue = [2, 3, 5, 7]
 truncatable_primes = []
 while queue:
     curr = queue.pop(0)
+    if curr > 10 and left_truncatable(curr):
+        truncatable_primes.append(curr)
+    for digit in [1, 3, 7, 9]:
+        next_val = curr * 10 + digit
+        if is_prime
