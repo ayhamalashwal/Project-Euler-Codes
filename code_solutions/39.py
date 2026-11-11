@@ -11,6 +11,6 @@ for p in range(1, 1001):
     if solutions > max_solutions:
         max_solutions = solutions
         best_solution = p
-print(best_solution)
+print(best_p)
 
 
