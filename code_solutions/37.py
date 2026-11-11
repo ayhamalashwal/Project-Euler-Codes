@@ -1,5 +1,8 @@
 def is_prime(n):
     if n < 2:
         return False
-    if n in (2,3):
-        return True
+    for i in range(2, int(i**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+def left_truncatable(n):
