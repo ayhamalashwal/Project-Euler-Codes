@@ -18,5 +18,10 @@ def solve():
         for j in range(i - 1, 0, -1):
             Pj = get_pentagonal(j)
             diff = Pi - Pj
+            if is_pentagonal(diff):
+                sum_val = Pi + Pj
+                if is_pentagonal(sum_val):
+                    return diff
+print(solve())
 
 
