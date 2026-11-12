@@ -17,6 +17,6 @@ count_triangle_words = 0
 for word in words:
     if triangle_number(word_value(word)):
         count_triangle_words += 1
-print(count_triangle_words)
+print(count_triangle_word)
     
 
