@@ -11,7 +11,7 @@ def word_value(word):
     return sum(ord(x) - 64 for x in word)
 def triangle_number(n):
     root = int((8 * n + 1)**0.5)
-    return root * root = (8 * n + 1)
+    return root * root == (8 * n + 1)
 count_triangle_words = 0
 
 for word in words:
