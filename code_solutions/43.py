@@ -6,9 +6,9 @@ for p in permutations("0123456789"):
     if int(s[2:5]) % 3 != 0: continue
     if int(s[3:6]) % 5 != 0: continue
     if int(s[4:7]) % 7 != 0: continue
-    if int([5:8]) % 11 != 0: continue
-    if int(p[6:9]) % 13 != 0: continue
-    if int(p[7:10]) % 17 != 0: continue
+    if int(s[5:8]) % 11 != 0: continue
+    if int(s[6:9]) % 13 != 0: continue
+    if int([7:10]) % 17 != 0: continue
     total_sum += p
 print(total_sum)
 
