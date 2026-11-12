@@ -1,6 +1,6 @@
 import os
 
-path = os.path.expanduser("Desktop/project_euler/assets/words(42.py).txt")
+path = os.path.expanduser("~/Desktop/project_euler/assets/words(42.py).txt")
 
 with open(path, "r") as f:
     content = f.read()
