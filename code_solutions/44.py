@@ -9,4 +9,6 @@ def is_pentagonal(n):
         return False
     return (1 + root) % 6 == 0
 def get_pentagonal(n):
+    return n * (3 * n - 1) // 2
+def solve():
 
