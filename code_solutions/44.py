@@ -11,4 +11,9 @@ def is_pentagonal(n):
 def get_pentagonal(n):
     return n * (3 * n - 1) // 2
 def solve():
+    i = 1
+    while True:
+        i += 1
+        Pk = get_pentagonal(n)
+        for j in range
 
