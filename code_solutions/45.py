@@ -15,3 +15,4 @@ def solve():
         H = n * (2 * n - 1)
         if is_pentagonal(H):
             return H
+print(solve())
