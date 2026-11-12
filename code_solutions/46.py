@@ -9,7 +9,7 @@ def is_prime(n):
         return False
     i = 5
     while i * i <= n:
-        if n % i == 0 or n % (i + 2):
+        if n % i == 0 or n % (i + 2) == 0:
             return False
         i += 6
     return True
