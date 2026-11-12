@@ -13,7 +13,7 @@ def is_prime(n):
             return False
         i += 6
     return True
-def goldback():
+def goldbach():
     n = 9
     if not is_prime(n):
         found = False
