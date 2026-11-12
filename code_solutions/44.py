@@ -14,6 +14,9 @@ def solve():
     i = 1
     while True:
         i += 1
-        Pk = get_pentagonal(n)
-        for j in range
+        Pi = get_pentagonal(i)
+        for j in range(i - 1, 0, -1):
+            Pj = get_pentagonal(j)
+            diff = Pi - Pj
+
 
