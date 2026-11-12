@@ -7,5 +7,5 @@ with open(path, "r") as f:
 
 words = content.replace('"', '').split(',')
 
-print(len(s))
+print(len(words))
 print(words[:5])
