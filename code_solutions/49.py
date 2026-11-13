@@ -20,5 +20,5 @@ for signature, primes in anagram.items():
                     a, b, c = primes[i], primes[j], primes[k]
                     if b - a == c - b:
                         if a != 1487:
-                            print(f"
+                            print(f"{a}{b}{c}")
 
