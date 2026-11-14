@@ -16,3 +16,9 @@ for i in range(len(primes)):
         break
     for j in range(i + max + 1, len(primes) + 1):
         current = prefix[j] - prefix[i]
+        if current >= LIMIT:
+            break
+        if is_prime[current]:
+            max = j - i
+            result = current
+print(result)
