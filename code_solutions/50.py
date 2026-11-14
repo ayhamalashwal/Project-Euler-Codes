@@ -9,3 +9,10 @@ primes = [i for i, prime in enumerate(is_prime) if prime]
 prefix = [0] * (len(primes) + 1)
 for i in range(len(primes)):
     prefix[i + 1] = prefix[i] + primes[i]
+max = 0
+result = 0
+for i in range(len(primes)):
+    if primes[i] * max >= lIMIT:
+        break
+    for j in range(i + max + 1, len(primes) + 1):
+        current = prefix[j] - prefix[i]
