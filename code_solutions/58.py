@@ -40,4 +40,4 @@ def spiral_prime_side_length(target_ratio: float = 0.10):
                 prime_count += 1
         if prime_count / total_diagonals < target_ratio:
             return side
-print(sprial_prime_side_length(0.1))
+print(spiral_prime_side_length(0.1))
