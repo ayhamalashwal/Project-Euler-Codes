@@ -57,4 +57,4 @@ def lowest_prime_pair_set_sum(target_size: int = 5, prime_limit: int = 10_000) -
                 current_set.pop()
     search(0, [], 0)
     return best_sum
-print(lowest_prime_pair_set_sum(5, 10000)
+print(lowest_prime_pair_set_sum(5, 10000))
