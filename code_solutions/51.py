@@ -23,4 +23,14 @@ def find_smallest(target_size: int, limit: int = 1000000):
     checked_patterns: set[str] = set()
     for prime in primes:
         s = str(prime)
-        for digit in set(s)
+        for digit in set(s):
+            if s.count(digit) < 3:
+                continue
+            pattern = s.replace(digit, "*")
+            if pattern in checked_patterns:
+                continue
+            checked_patterns.add(pattern)
+            family = build(pattern, prime_set)
+            if len(family) == target_size and prime in family:
+                return prime
+print(
