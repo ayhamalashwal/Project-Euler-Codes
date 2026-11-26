@@ -20,4 +20,7 @@ def build(pattern: str, prime_set: set[int]):
 def find_smallest(target_size: int, limit: int = 1000000):
     primes = sieve(limit)
     prime_set set(primes)
-    checked
+    checked_patterns: set[str] = set()
+    for prime in primes:
+        s = str(prime)
+        for digit in set(s)
