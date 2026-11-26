@@ -39,7 +39,7 @@ def find_cyclical_figurate_sum():
             return None
         needed_prefix = path[-1] % 100
         for next_type in all_types - used_types:
-            for candidate in by_prefix.get((next_type, needed_prefix), ())
+            for candidate in by_prefix.get((next_type, needed_prefix), ()):
                 path.append(candidate)
                 used_types.add(next_type)
                 result = backtrack(path, used_types)
