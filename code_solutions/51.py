@@ -7,4 +7,17 @@ def sieve(limit: int):
             for multiple in range(num * num, limit + 1, num):
                 is_prime[multiple] = False
     return [num for num, prime in enumerate(is_prime) if prime]
-def build
+def build(pattern: str, prime_set: set[int]):
+    family: list[int] = []
+    start = pattern[0] == "*"
+    for digit in "0123456789":
+        if digit == "0" and start:
+            continue
+        candidate = int(pattern.replace("*", digit))
+        if candidate in prime_set:
+            family.append(candidate)
+    return family
+def find_smallest(target_size: int, limit: int = 1000000):
+    primes = sieve(limit)
+    prime_set set(primes)
+    checked
