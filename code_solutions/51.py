@@ -19,7 +19,7 @@ def build(pattern: str, prime_set: set[int]):
     return family
 def find_smallest(target_size: int, limit: int = 1000000):
     primes = sieve(limit)
-    prime_set set(primes)
+    prime_set = set(primes)
     checked_patterns: set[str] = set()
     for prime in primes:
         s = str(prime)
@@ -33,4 +33,4 @@ def find_smallest(target_size: int, limit: int = 1000000):
             family = build(pattern, prime_set)
             if len(family) == target_size and prime in family:
                 return prime
-print(
+print(find_smallest(8))
