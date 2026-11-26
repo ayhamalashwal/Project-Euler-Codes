@@ -11,4 +11,4 @@ def count(max_n: int = 100, threshold: int = 1000000):
             last_r = n - first_r
             total += last_r - first_r + 1
     return total
-print(count(100, 1000000)
+print(count(100, 1000000))
