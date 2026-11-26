@@ -12,7 +12,7 @@ for i in range(len(primes)):
 max = 0
 result = 0
 for i in range(len(primes)):
-    if primes[i] * max >= lIMIT:
+    if primes[i] * max >= LIMIT:
         break
     for j in range(i + max + 1, len(primes) + 1):
         current = prefix[j] - prefix[i]
