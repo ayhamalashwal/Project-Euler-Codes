@@ -21,4 +21,16 @@ def minimal_x(D: int):
             return p
         p_prev2, p_prev1 = p_prev1, p
         q_prev2, q_prev1 = q_prev1, q
-def solve_pell(limit: int = 1000)
+def solve_pell(limit: int = 1000):
+    max_x = -1
+    best_d = -1
+    for D in range(2, limit + 1):
+        x = minimal_x(D)
+        if x is not None and x > max_x:
+            max_x = x
+            best_d = D
+    return best_d, max_x
+d_result, x_result = solve_pell(1000)
+print(d_result)
+print(x_result)
+
