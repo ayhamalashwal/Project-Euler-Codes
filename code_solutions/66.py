@@ -17,7 +17,7 @@ def minimal_x(D: int):
         p = a * p_prev1 + p_prev2
         q = a * q_prev1 + q_prev2
 
-        if p + p - D * q * q == 1:
+        if p * p - D * q * q == 1:
             return p
         p_prev2, p_prev1 = p_prev1, p
         q_prev2, q_prev1 = q_prev1, q
@@ -32,5 +32,5 @@ def solve_pell(limit: int = 1000):
     return best_d, max_x
 d_result, x_result = solve_pell(1000)
 print(d_result)
-print(x_result)
+print(len(str(x_result)))
 
