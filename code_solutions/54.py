@@ -49,7 +49,7 @@ def count_player1(lines):
             continue
         hand1 = tokens[:5]
         hand2 = tokens[5:]
-        if evaluate_hand(hand1) > evaluate_hand(hand_2):
+        if evaluate_hand(hand1) > evaluate_hand(hand2):
             wins += 1
     return wins
 poker_file = Path.home() / "Desktop" / "project_euler" / "assets" / "poker(54.py).txt"
