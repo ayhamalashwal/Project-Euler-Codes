@@ -19,12 +19,12 @@ def evaluate_hand(cards):
     suits = [c[1] for c in cards]
     is_flush = len(set(suits)) == 1
     straight_high = get_straight_high(values)
-    freq_items = sorted(Counter(values).items(), key=lambda item: (item[1], item[0]))
+    freq_items = sorted(Counter(values).items(), key=lambda item: (item[1], item[0], reverse=True))
     counts = tuple(count for count, _ in freq_items)
     ordered_vals = tuple(val for _, val in freq_items)
     if is_flush and straight_high is not None:
         rank = 10 if straight_high == 14 else 9
-        retrun(rank, straight_high)
+        return(rank, straight_high)
     if counts == (4, 1):
         return (8, *ordered_vals)
     if counts == (3, 2):
@@ -40,7 +40,6 @@ def evaluate_hand(cards):
     if counts == (2, 1, 1, 1):
         return (2, *ordered_vals)
     return (1, *values)
-
 def count_player1(lines):
     wins = 0
     for line in lines:
