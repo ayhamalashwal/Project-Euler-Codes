@@ -22,7 +22,7 @@ def find_key(stream: list[int]) -> int:
         if score > best_score:
             best_score = score
             best_key = candidate
-        if best_key = None:
+        if best_key == None:
             raise ValueError("Error")
         return best_key
 key = [find_best_key_byte(cipher[offset::3]) for offset in range(3)]
