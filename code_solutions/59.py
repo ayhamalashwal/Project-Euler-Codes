@@ -18,7 +18,7 @@ def find_key(stream: list[int]) -> int:
         decrypted = [b ^ candidate for b in stream]
         if not all(is_printable_ascii(code) for code in decrypted):
             continue
-        score = sum(score_english_byte(code) for code in decrypted):
+        score = sum(score_english_byte(code) for code in decrypted)
             if score > best_score:
                 best_score = score
                 best_key = candidate
