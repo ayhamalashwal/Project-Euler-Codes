@@ -17,7 +17,7 @@ def get_straight_high(values_desc):
 def evaluate_hand(cards):
     values = sorted((VALUES[c[0]] for c in cards), reverse=True)
     suits = [c[1] for c in cards]
-    if_flush = len(set(suits)) == 1
+    is_flush = len(set(suits)) == 1
     straight_high = get_straight_high(values)
     freq_items = sorted(Counter(values).items(), key=lambda item: (item[1], item[0]))
     counts = tuple(count for count, _ in freq_items)
