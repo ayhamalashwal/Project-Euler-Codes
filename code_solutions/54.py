@@ -22,7 +22,7 @@ def evaluate_hand(cards):
     counts = tuple(count for count, _ in freq_items)
     ordered_vals = tuple(val for _, val in freq_items)
     if is_flush and straight_high is not None:
-        rank = 10 if straight_high = 14 else 9
+        rank = 10 if straight_high == 14 else 9
         retrun(rank, straight_high)
     if counts == (4, 1):
         return (8, *ordered_vals)
