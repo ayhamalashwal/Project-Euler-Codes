@@ -25,7 +25,7 @@ def find_key(stream: list[int]) -> int:
         if best_key == None:
             raise ValueError("Error")
         return best_key
-key = [find_best_key_byte(cipher[offset::3]) for offset in range(3)]
+key = [find_key(cipher[offset::3]) for offset in range(3)]
 plain_codes = [code ^ key[i % 3] for i, code in enumerate(cipher)]
 plain_text = "".join(chr(code) for code in plain_codes)
 print("recovered key:", "".join(chr(k) for k in key))
