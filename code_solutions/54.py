@@ -51,4 +51,6 @@ def count_player1(lines):
         if evaluate_hand(hand1) > evaluate_hand(hand_2):
             wins += 1
     return wins
-poker_file = Path.home() / Desktop
+poker_file = Path.home() / "Desktop" / "project_euler" / "assets" / "poker.txt"
+with poker_file.open("r", encoding="utf-8") as f:
+    print(count_player1(f))
