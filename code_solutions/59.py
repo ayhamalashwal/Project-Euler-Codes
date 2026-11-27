@@ -1,5 +1,4 @@
 import collections
-
 from pathlib import Path
 
 cipher_path = Path.home() / "Desktop" / "project_euler" / "assets" / "xor(59.py).txt"
