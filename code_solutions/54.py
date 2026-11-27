@@ -1,9 +1,9 @@
 from collections import Counter
+from pathlib import Path
 
 values = {r: i for i, r in enumerate('23456789TJQKA', start=2)}
 straights = [(v, v-1, v-2, v-3, v-4) for v in range(14, 4, -1)]
 ranks = [(1, 1, 1, 1, 1), (2, 1, 1, 1), (2, 2, 1), (3, 1, 1), (), (), (3, 2), (4, 1)]
-
 def hand_rank(hand):
     counts = Counter(card[0] for card in hand)
     sorted_counts = sorted(((v, values[k]) for k, v in counts.items()), reverse=True)
@@ -18,8 +18,14 @@ def hand_rank(hand):
     if score[1] in straights:
         score[0] = 8 if score[0] == 5 else 4
     return score
-
-for _ in range(int(input())):
-    hand = input().split()
-    player1, player2 = hand[:5], hand[5:]
-    print("Player 1" if hand_rank(player1) > hand_rank(player2) else "Player 2")
+poker_file = Path.home() / "Desktop" / "project_euler" / "assets" / "poker (54.py).txt"
+player1_wins = 0
+with poker_file.open("r", encoding="utf-8") as f:
+    for line in f:
+        cards = line.strip().split()
+        if not cards:
+            continue
+        player1, player2 = cards[:5], cards[5:]
+        if hand_rank(player1) > hand_rank(player2):
+            player1_wins += 1
+print(player1_wins)
