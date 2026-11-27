@@ -30,4 +30,4 @@ plain_codes = [code ^ key[i % 3] for i, code in enumerate(cipher)]
 plain_text = "".join(chr(code) for code in plain_codes)
 print("recovered key:", "".join(chr(k) for k in key))
 print("plain_text:", plain_text)
-print("ascii sum:", sum(plain_codes)
+print("ascii sum:", sum(plain_codes))
