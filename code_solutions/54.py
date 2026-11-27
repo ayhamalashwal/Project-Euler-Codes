@@ -18,7 +18,7 @@ def hand_rank(hand):
     if score[1] in straights:
         score[0] = 8 if score[0] == 5 else 4
     return score
-poker_file = Path.home() / "Desktop" / "project_euler" / "assets" / "poker (54.py).txt"
+poker_file = Path.home() / "Desktop" / "project_euler" / "assets" / "poker(54.py).txt"
 player1_wins = 0
 with poker_file.open("r", encoding="utf-8") as f:
     for line in f:
