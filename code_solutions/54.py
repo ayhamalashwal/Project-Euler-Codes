@@ -9,7 +9,7 @@ def get_straight_high(values_desc):
     unique_vals = set(values_desc)
     if len(unique_vals) != 5:
         return None
-    if unique_vals = {14, 5, 4, 3, 2}
+    if unique_vals == {14, 5, 4, 3, 2}
         return 5
     high = max(unique_vals)
     low = min(unique_vals)
