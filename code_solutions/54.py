@@ -1,56 +1,25 @@
 from collections import Counter
-from pathlib import Path
 
-VALUES = {
-    "2": 2, "3": 3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "T": 10,
-    "J": 11, "Q": 12, "K": 13, "A": 14
-    }
-def get_straight_high(values_desc):
-    unique_vals = set(values_desc)
-    if len(unique_vals) != 5:
-        return None
-    if unique_vals == {14, 5, 4, 3, 2}:
-        return 5
-    high = max(unique_vals)
-    low = min(unique_vals)
-    return high if high - low == 4 else None
-def evaluate_hand(cards):
-    values = sorted((VALUES[c[0]] for c in cards), reverse=True)
-    suits = [c[1] for c in cards]
-    is_flush = len(set(suits)) == 1
-    straight_high = get_straight_high(values)
-    freq_items = sorted(Counter(values).items(), key=lambda item: (item[1], item[0]), reverse=True)
-    counts = tuple(count for count, _ in freq_items)
-    ordered_vals = tuple(val for _, val in freq_items)
-    if is_flush and straight_high is not None:
-        rank = 10 if straight_high == 14 else 9
-        return(rank, straight_high)
-    if counts == (4, 1):
-        return (8, *ordered_vals)
-    if counts == (3, 2):
-        return (7, *ordered_vals)
-    if is_flush:
-        return (6, *values)
-    if straight_high is not None:
-        return (5, straight_high)
-    if counts == (3, 1, 1):
-        return (4, *ordered_vals)
-    if counts == (2, 2, 1):
-        return (3, *ordered_vals)
-    if counts == (2, 1, 1, 1):
-        return (2, *ordered_vals)
-    return (1, *values)
-def count_player1(lines):
-    wins = 0
-    for line in lines:
-        tokens = line.strip().split()
-        if not tokens:
-            continue
-        hand1 = tokens[:5]
-        hand2 = tokens[5:]
-        if evaluate_hand(hand1) > evaluate_hand(hand2):
-            wins += 1
-    return wins
-poker_file = Path.home() / "Desktop" / "project_euler" / "assets" / "poker(54.py).txt"
-with poker_file.open("r", encoding="utf-8") as f:
-    print(count_player1(f))
+values = {r: i for i, r in enumerate('23456789TJQKA', start=2)}
+straights = [(v, v-1, v-2, v-3, v-4) for v in range(14, 4, -1)]
+ranks = [(1, 1, 1, 1, 1), (2, 1, 1, 1), (2, 2, 1), (3, 1, 1), (), (), (3, 2), (4, 1)]
+
+def hand_rank(hand):
+    counts = Counter(card[0] for card in hand)
+    sorted_counts = sorted(((v, values[k]) for k, v in counts.items()), reverse=True)
+    score = list(zip(*sorted_counts))
+    try:
+        if score[1]==(14, 5, 4, 3, 2): score[1] = (5, 4, 3, 2, 1)
+        score[0] = ranks.index(score[0])
+    except ValueError:
+        score[0] = 0
+    if len(set(card[1] for card in hand)) == 1:
+        score[0] = 5
+    if score[1] in straights:
+        score[0] = 8 if score[0] == 5 else 4
+    return score
+
+for _ in range(int(input())):
+    hand = input().split()
+    player1, player2 = hand[:5], hand[5:]
+    print("Player 1" if hand_rank(player1) > hand_rank(player2) else "Player 2")
